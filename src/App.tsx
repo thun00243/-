@@ -364,7 +364,7 @@ export default function App() {
 
           {/* Card 4: Results (Bottom Wide) */}
           <section 
-            className={`bento-card md:col-span-3 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 transition-all duration-700 order-4 ${!result ? 'opacity-40 grayscale blur-[2px]' : 'border-blue-200 shadow-xl shadow-blue-500/5 bg-white'}`}
+            className={`bento-card md:col-span-3 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-6 transition-all duration-700 order-4 relative ${!result ? 'opacity-40 grayscale blur-[2px]' : 'border-blue-200 shadow-xl shadow-blue-500/5 bg-white'}`}
           >
             <div className="flex-1 md:border-r border-slate-100 md:pr-8">
               <span className="label-small">總加班時數</span>
@@ -409,16 +409,20 @@ export default function App() {
                 ORIGINAL CALC: {Math.floor(result.totalPay).toLocaleString()}
               </div>
             )}
+
+            <div className="absolute bottom-1 left-3 text-[9px] text-slate-400 opacity-30 font-medium pointer-events-none select-none tracking-wider">
+              製作人-翁鵬翔
+            </div>
           </section>
 
         </main>
 
-        <footer className="mt-4 pb-8 flex items-center justify-center gap-6">
-          <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">&copy; 新北市政府消防局 · 外勤人員考勤系統</p>
-          <div className="h-px bg-slate-200 flex-1 opacity-50"></div>
-          <div className="flex items-center gap-2 text-slate-300">
-             <Calculator size={12} />
-             <CalendarDays size={12} />
+        <footer className="mt-8 pb-12 flex flex-col items-center justify-center gap-4">
+          <div className="flex items-center gap-2 text-slate-400 bg-slate-100/50 px-4 py-2 rounded-full border border-slate-100">
+            <AlertCircle size={14} className="text-orange-400" />
+            <p className="text-[11px] font-medium tracking-wide">
+              僅提供外勤同仁試算，實際數字依人事單位報表為準
+            </p>
           </div>
         </footer>
 
