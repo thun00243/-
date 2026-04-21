@@ -1,0 +1,6 @@
+{
+  "name": "新北市政府消防局外勤人員超勤時數計算器",
+  "description": "專為新北市政府消防局外勤人員設計的加班與放假時數計算工具，支援超勤上限計算與剩餘時數結算。",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
